@@ -1,0 +1,45 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 13,
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorStyle": "line",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Absolute Black",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.startupEditor": "none",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8CategorySeverity.E": "Information",
+    "python.linting.flake8CategorySeverity.F": "Warning",
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "119"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "119"
+    ],
+    "isort.check": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "python.linting.mypyEnabled": true,
+    "markdownlint.config": {
+        "MD007": false,
+        "MD024": false,
+        "MD033": false,
+        "MD041": false,
+        "MD046": false
+    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
