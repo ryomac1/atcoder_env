@@ -15,6 +15,8 @@ setopt hist_expire_dups_first   # HISTFILEのサイズがHISTSIZEを超える場
 # enable completion
 autoload -Uz compinit; compinit
 autoload -Uz colors; colors
+# プロンプトをカレントディレクトリにして色を緑色にする
+export PS1='%F{green}[%c]$ %f'
 
 # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 setopt auto_param_slash
@@ -53,8 +55,10 @@ alias zshrc="vi ~/.zshrc"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias ls='ls -a'
 # acc関係のalias
 alias test='oj t -c "python3 ./main.py" -d ./tests/'
 alias sub='acc s main.py -- --guess-python-interpreter pypy'
 alias subp='acc s main.py'
 alias an='acc new'
+
