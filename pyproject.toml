@@ -21,7 +21,7 @@ matplotlib = "^3.7.1"
 seaborn = "^0.12.2"
 prefect = "^2.10.7"
 pandera = "^0.15.1"
-
+online-judge-tools = "^11.5.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

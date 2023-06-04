@@ -48,9 +48,9 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 
 # setting alias
-alias op="open ./"
 alias python="python3"
 alias zshrc="vi ~/.zshrc"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias test='oj t -c "python3 ./main.py" -d ./tests/'

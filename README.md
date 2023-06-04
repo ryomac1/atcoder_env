@@ -17,18 +17,26 @@
    ```bash
    docker-compose up -d --build
    ```
+
 2. VSCode でリモートコンテナに接続します。[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)拡張機能が必要です。
 
 ## Usage
 
-### wAtCoder CLI (`acc`)
+### AtCoder CLI の使用方法
 
-`atcoder-cli`（通称：acc）は AtCoder の問題を効率的に解くための CLI ツールです。基本的な使い方は以下の通りです：
-
-1. **ログイン**: `acc login` コマンドを実行して AtCoder にログインします。
-2. **コンテストの問題をダウンロード**: `acc new [contest ID]` コマンドで指定したコンテストの全問題をダウンロードします。
-3. **問題を解く**: ダウンロードした問題を開き、解答コードを書きます。
-4. **テスト**: `acc test` コマンドで解答コードのテストを実行します。
-5. **提出**: 解答が正しいと判断されたら、`acc submit [file]` コマンドで解答を提出します。
+1. Online Judge Tools にログインする: `oj login https://atcoder.jp/`
+2. AtCoder のアカウントでログインする: `acc login`
+3. ログイン状態を確認する: `acc session`
+   - ログインセッションはローカルファイルに保存されますが、パスワードは保存されません。
+   - ログインセッションを削除するには `acc logout` を使用します。
+4. 新規コンテストを作成する（例：abc001）: `acc new abc001`
+   - `abc001/` ディレクトリが作成されます。
+5. 作成したコンテストのディレクトリに移動する: `cd abc001/`
+6. コンテスト情報を表示する: `acc contest`
+7. タスクリストを表示する: `acc tasks`
+8. タスクを追加する: `acc add`
+9. 追加したタスクのディレクトリに移動する（例：タスク a）: `cd a/`
+10. 解答コードを記述する（例：main.py）: `touch main.py'
+11. 解答を提出する: `acc submit main.py`
 
 詳細なヘルプは `acc -h` や `acc [command] -h` を実行して確認できます。
