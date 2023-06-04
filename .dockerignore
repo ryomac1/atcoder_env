@@ -5,6 +5,7 @@
 **/*.pyc
 **/*.pyo
 **/*.pyd
+.zshrc
 Dockerfile
 docker-compose.yml
 *.log

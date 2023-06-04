@@ -38,6 +38,6 @@
 9. 追加したタスクのディレクトリに移動する（例：タスク a）: `cd a/`
 10. 解答コードを記述する（例：main.py）: `touch main.py`
 11. 解答コードをテストする : `test`
-12. 解答を提出する: `acc submit main.py`
+12. 解答を提出する: `acc s main.py`
 
 詳細なヘルプは `acc -h` や `acc [command] -h` を実行して確認できます。
