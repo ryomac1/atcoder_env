@@ -1,6 +1,6 @@
 {
   "dockerComposeFile": "../docker-compose.yml",
-  "service": "gpu",
+  "service": "atcoder_env",
   "workspaceFolder": "/workspace",
   "containerEnv": {
     "TZ": "Asia/Tokyo"
@@ -44,12 +44,6 @@
     "neilbarkhina.gitdownloadazurerepos",
     // Docker
     "ms-azuretools.vscode-docker",
-    // Azure
-    "ms-vscode.azure-account",
-    "ms-vscode.azure-repos",
-    "ms-azuretools.vscode-azureresourcegroups",
-    "ms-azuretools.vscode-azurestorage",
-    "ms-azuretools.vscode-azurevirtualmachines",
     // remote
     "ms-vscode-remote.remote-containers",
     "ms-vscode-remote.remote-ssh",
