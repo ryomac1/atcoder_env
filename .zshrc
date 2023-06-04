@@ -15,8 +15,8 @@ setopt hist_expire_dups_first   # HISTFILEのサイズがHISTSIZEを超える場
 # enable completion
 autoload -Uz compinit; compinit
 autoload -Uz colors; colors
-# プロンプトをカレントディレクトリにして色を緑色にする
-export PS1='%F{green}[%c]$ %f'
+# プロンプトをfullpath にして色を緑色にする
+export PS1='%F{green}%d$ %f'
 
 # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 setopt auto_param_slash
