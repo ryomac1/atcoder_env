@@ -20,6 +20,8 @@ RUN poetry install
 # Install AtCoder-cli
 RUN npm install -g atcoder-cli
 RUN acc config default-task-choice all
+COPY atcoder-cli-config/config.json /root/.config/atcoder-cli-nodejs/
+COPY atcoder-cli-config/template /root/.config/atcoder-cli-nodejs/template
 
 COPY .zshrc /root/
 CMD ["/bin/zsh"]

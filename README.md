@@ -9,6 +9,18 @@
 - Docker
 - Docker Compose
 - VSCode
+  [Docker Desktop](https://www.docker.com/products/docker-desktop)をインストールして起動しておく必要があります。(Docker Compose が同梱されています)
+
+## Environments
+
+- python 3.9.16
+- VSCode(devcontainer.json, setting.json)
+- docker
+- poetry
+- flake8
+- black
+- isort
+- mypy
 
 ## Setup
 
@@ -42,5 +54,6 @@
 
 ### 参考記事
 
-https://github.com/Tatamo/atcoder-cli
-https://qiita.com/seigot/items/ce9433e62bd2eea5a9ef
+- [atcoder-cli GitHub](https://github.com/Tatamo/atcoder-cli)
+
+- [qiita 記事](https://qiita.com/seigot/items/ce9433e62bd2eea5a9ef)

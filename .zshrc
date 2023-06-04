@@ -56,9 +56,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ls='ls -a'
+alias vs='code'
 # acc関係のalias
 alias test='oj t -c "python3 ./main.py" -d ./tests/'
-alias sub='acc s main.py -- --guess-python-interpreter pypy'
-alias subp='acc s main.py'
+alias sub='acc s main.py -- --guess-python-interpreter pypy -w 0 -y'
+alias subp='acc s main.py -w 0 -y'
 alias an='acc new'
 
