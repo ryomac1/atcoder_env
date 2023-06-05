@@ -9,7 +9,8 @@
 - Docker
 - Docker Compose
 - VSCode
-  [Docker Desktop](https://www.docker.com/products/docker-desktop)をインストールして起動しておく必要があります。(Docker Compose が同梱されています)
+- Remote - Containers (VSCode Extension)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)をインストールして起動しておく必要があります。
 
 ## Environments
 
