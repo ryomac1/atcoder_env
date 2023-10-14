@@ -28,9 +28,9 @@
 1. Docker イメージの build とコンテナの起動
 
    ```bash
+
    docker-compose up -d --build
    ```
-
 2. VSCode でリモートコンテナに接続します。[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)拡張機能が必要です。
 
 ## Usage
@@ -56,5 +56,4 @@
 ### 参考記事
 
 - [atcoder-cli GitHub](https://github.com/Tatamo/atcoder-cli)
-
 - [qiita 記事](https://qiita.com/seigot/items/ce9433e62bd2eea5a9ef)
