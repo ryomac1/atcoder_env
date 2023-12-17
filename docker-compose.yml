@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    shm_size: "28gb"
+    shm_size: "16gb"
     volumes:
       - type: bind
         source: $PWD

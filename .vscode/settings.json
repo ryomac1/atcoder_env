@@ -1,6 +1,7 @@
 {
+  "editor.fontSize": 13,
+	"editor.tabSize": 4,
   "files.autoSave": "afterDelay",
-  "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "boundary",
   "editor.cursorStyle": "line",
@@ -10,26 +11,9 @@
   "workbench.colorTheme": "Absolute Black",
   "workbench.panel.defaultLocation": "right",
   "workbench.startupEditor": "none",
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": false,
-  "python.linting.lintOnSave": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8CategorySeverity.E": "Information",
-  "python.linting.flake8CategorySeverity.F": "Warning",
-  "python.linting.flake8Args": ["--max-line-length", "119"],
-  "python.formatting.provider": "none",
-  "python.formatting.blackArgs": ["--line-length", "119"],
   "isort.check": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "python.linting.mypyEnabled": true,
-  "markdownlint.config": {
-    "MD007": false,
-    "MD024": false,
-    "MD033": false,
-    "MD041": false,
-    "MD046": false
+    "source.organizeImports": "explicit"
   },
   "python.testing.pytestArgs": ["tests"],
   "python.testing.unittestEnabled": false,
@@ -44,9 +28,22 @@
     "unordered_set": "cpp",
     "vector": "cpp",
     "forward_list": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "modint": "cpp",
+    "chrono": "cpp",
+    "array": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "regex": "cpp",
+    "valarray": "cpp"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
-  }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "cmake.sourceDirectory": "/Users/r/00_project/atcoder/ac-library/test/benchmark",
 }
+

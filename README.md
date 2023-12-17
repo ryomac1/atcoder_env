@@ -3,6 +3,7 @@
 ## Overview
 
 本プロジェクトは、AtCoder の問題を効率的に解くための環境構築を目指しています。VSCode, Docker, `atcoder-cli` を組み合わせて使用します。
+使用言語はpython,C++です。
 
 ## Prerequisites
 
@@ -14,26 +15,41 @@
 
 ## Environments
 
-- python 3.9.16
-- VSCode(devcontainer.json, setting.json)
-- docker
-- poetry
-- flake8
-- black
-- isort
-- mypy
+- python 3.11.1
+  - poetry
+  - flake8
+  - black
+  - isort
+  - mypy
+  - ACL for python
+- C++
+  - gcc
+  - ACL
 
 ## Setup
 
 1. Docker イメージの build とコンテナの起動
 
    ```bash
-
    docker-compose up -d --build
    ```
+
 2. VSCode でリモートコンテナに接続します。[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)拡張機能が必要です。
 
 ## Usage
+### python
+- sampleフォルダにa.py,b.pyがあります。
+- どちらもNをうけとってそのまま出力するファイルです
+- Terminal上でpython a.pyで実行できます
+- 右上の>やcommmand+returnでも実行できます
+- a.pyは一般的な書き方、b.pyはファイル内に入力まで書いておけるやり方です
+### C++
+- sampleフォルダにa.pyがあります
+- どちらもNをうけとってそのまま出力するファイルです
+- Terminalでg++ a.cpp -o aでコンパイルして
+- ./aで実行できます
+- もしくは右上の>でコンパイルから実行までされます
+
 
 ### AtCoder CLI の使用方法
 
