@@ -1,5 +1,5 @@
 # ignore directories
-main/
+main/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
