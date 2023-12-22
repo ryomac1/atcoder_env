@@ -14,6 +14,17 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
+  "flake8.args": [
+    "--max-line-length=119",
+  ],
+  "mypy-type-checker.args": [
+    "--ignore-missing-imports",
+  ],
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
+  "isort.check": true,
   "files.associations": {
     "iostream": "cpp",
     "*.tcc": "cpp",
