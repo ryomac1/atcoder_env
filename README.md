@@ -2,8 +2,9 @@
 
 ## Overview
 
-本プロジェクトは、AtCoder の問題を効率的に解くための環境構築を目指しています。VSCode, Docker, `atcoder-cli` を組み合わせて使用します。
-使用言語はpython,C++です。
+- 本プロジェクトは、AtCoder の問題を効率的に解くための環境構築を目指しています。
+- `VSCode`, `Docker`, `atcoder-cli` を組み合わせて使用します。
+- 使用可能言語はpython, C++です。
 
 ## Prerequisites
 
@@ -15,7 +16,7 @@
 
 ## Environments
 
-- python 3.11.1
+- python 3.11.4
   - poetry
   - flake8
   - black
@@ -37,21 +38,27 @@
 2. VSCode でリモートコンテナに接続します。[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)拡張機能が必要です。
 
 ## Usage
+基本的にmain配下にて自由に使うことを想定していますが、src/sample下にpythonとC++のサンプルファイルがあります
+
 ### python
-- sampleフォルダにa.py,b.pyがあります。
-- どちらもNをうけとってそのまま出力するファイルです
-- Terminal上でpython a.pyで実行できます
-- 右上の>やcommmand+returnでも実行できます
-- a.pyは一般的な書き方、b.pyはファイル内に入力まで書いておけるやり方です
+- sampleの使用方法
+  - src/sampleにa.py,b.pyがあります。
+  - どちらもNをうけとってそのまま出力するファイルです
+  - `python a.py`で実行できます
+  - 右上の>やcommmand + returnでも実行できます
+  - a.pyは一般的な書き方、b.pyはファイル内に入力まで書いておけるやり方です
+- Libraryの追加
+  - `poetry add library_name`で追加できます
+
 ### C++
-- sampleフォルダにa.pyがあります
+- src/samplにa.cppがあります
 - どちらもNをうけとってそのまま出力するファイルです
-- Terminalでg++ a.cpp -o aでコンパイルして
-- ./aで実行できます
+- `g++ a.cpp -o a`でコンパイルして
+- `./a`で実行できます
 - もしくは右上の>でコンパイルから実行までされます
 
 
-### AtCoder CLI の使用方法
+### Usage for AtCoder CLI
 
 1. Online Judge Tools にログインする: `oj login https://atcoder.jp/`
 2. AtCoder のアカウントでログインする: `acc login`
@@ -69,7 +76,5 @@
 
 詳細なヘルプは `acc -h` や `acc [command] -h` を実行して確認できます。
 
-### 参考記事
-
+### Reference
 - [atcoder-cli GitHub](https://github.com/Tatamo/atcoder-cli)
-- [qiita 記事](https://qiita.com/seigot/items/ce9433e62bd2eea5a9ef)

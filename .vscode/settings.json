@@ -1,6 +1,6 @@
 {
-  "editor.fontSize": 13,
-	"editor.tabSize": 4,
+  "editor.fontSize": 15,
+  "editor.tabSize": 4,
   "files.autoSave": "afterDelay",
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "boundary",
@@ -11,13 +11,9 @@
   "workbench.colorTheme": "Absolute Black",
   "workbench.panel.defaultLocation": "right",
   "workbench.startupEditor": "none",
-  "isort.check": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
-  "python.testing.pytestArgs": ["tests"],
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true,
   "files.associations": {
     "iostream": "cpp",
     "*.tcc": "cpp",
@@ -40,10 +36,12 @@
     "valarray": "cpp"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
   },
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "cmake.sourceDirectory": "/Users/r/00_project/atcoder/ac-library/test/benchmark",
 }
-

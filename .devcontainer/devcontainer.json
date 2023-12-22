@@ -1,6 +1,6 @@
 {
 	"dockerComposeFile": "../docker-compose.yml",
-	"service": "dev",
+	"service": "env",
 	"workspaceFolder": "/workspace",
 	"containerEnv": {
 		"TZ": "Asia/Tokyo"

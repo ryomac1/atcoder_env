@@ -5,7 +5,10 @@
 **/*.pyc
 **/*.pyo
 **/*.pyd
+*.log
+*.bk
+.DS_Store
+.gitignore
+.vscode
 Dockerfile
 docker-compose.yml
-.DS_Store
-*.log

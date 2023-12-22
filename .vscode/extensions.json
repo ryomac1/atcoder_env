@@ -1,0 +1,38 @@
+{
+    "recommendations": [
+        // VSCode theme
+        "MS-CEINTL.vscode-language-pack-ja",
+        "tarik02.absolutely-black",
+        "PKief.material-icon-theme",
+        // editor
+        "mosapride.zenkaku",
+        "oderwat.indent-rainbow",
+        "ionutvmi.path-autocomplete",
+        "shardulm94.trailing-spaces",
+        "usernamehw.errorlens",
+        "IBM.output-colorizer",
+        "njpwerner.autodocstring",
+        "nemesv.copy-file-name",
+        "christian-kohler.path-intellisense",
+        "Gruntfuggly.todo-tree",
+        "alefragnani.project-manager",
+        "ipatalas.vscode-sprint-planner",
+        // Python
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        // C++
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        // formatter & linter
+        "ms-python.flake8",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        // Other
+        "GitHub.copilot",
+    ],
+}

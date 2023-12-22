@@ -1,15 +1,15 @@
-submission/
-src/
-AHC/
+# ignore directories
+main/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 .devcontainer
+
 # Caches
 *.pytest_cache/
 *.mypy_cache/
-
 
 # Jupyter Notebook
 .ipynb_checkpoints

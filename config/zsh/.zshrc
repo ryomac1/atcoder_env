@@ -55,8 +55,8 @@ alias zshrc="vi ~/.zshrc"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ls='ls -a'
 alias vs='code'
+
 # acc関係のalias
 alias test='oj t -c "python3 ./main.py" -d ./tests/'
 alias sub='acc s main.py -- --guess-python-interpreter pypy -w 0 -y'
