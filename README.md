@@ -18,9 +18,7 @@
 
 - python 3.11.4
   - poetry
-  - flake8
-  - black
-  - isort
+  - ruff
   - mypy
   - ACL for python
 - C++

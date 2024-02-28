@@ -5,7 +5,7 @@
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairs": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.renderWhitespace": "boundary",
@@ -42,8 +42,7 @@
   },
   "ruff.lint.args": [
     "--config=${workspaceFolder}/pyproject.toml",
-    "--ignore=E203,E741,F401,F821,F841",
-    "--line-length=119",
+    "--ignore=E203,E741,F401,F821,F841,E731,E402",
   ],
   "mypy-type-checker.args": [
     "--config=${workspaceFolder}/pyproject.toml"
