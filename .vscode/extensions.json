@@ -28,11 +28,11 @@
         "ms-vscode.cpptools",
         "ms-vscode.cpptools-extension-pack",
         // formatter & linter
-        "ms-python.flake8",
-        "ms-python.black-formatter",
-        "ms-python.isort",
+        "charliermarsh.ruff",
         "ms-python.mypy-type-checker",
         // Other
         "GitHub.copilot",
+        "mechatroner.rainbow-csv",
+        "adpyke.codesnap",
     ],
 }

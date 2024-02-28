@@ -50,13 +50,18 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 
 # setting alias
-alias python="python3"
-alias zshrc="vi ~/.zshrc"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias vs='code'
-
+alias ls='ls -G'
+# c++関係のalias
+alias g="g++ -std=c++23 -O2"
+alias a="./a.out"
+alias ga="g++ -std=c++23 -O2 a.cpp -o a.out && ./a.out"
+# python関係のalias
+alias p="python3"
+alias python="python3"
 # acc関係のalias
 alias test='oj t -c "python3 ./main.py" -d ./tests/'
 alias sub='acc s main.py -- --guess-python-interpreter pypy -w 0 -y'

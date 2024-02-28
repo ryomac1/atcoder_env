@@ -24,6 +24,8 @@ RUN apt-get update && \
 COPY config/atcoder-cli/config.json /root/.config/atcoder-cli-nodejs/
 COPY config/atcoder-cli/template /root/.config/atcoder-cli-nodejs/template
 
+# Install AC Library C++
+
 # Install AC Library Python
 RUN pip install git+https://github.com/not522/ac-library-python
 

@@ -14,6 +14,9 @@ scikit-learn = "^1.3.2"
 jupyter = "^1.0.0"
 seaborn = "^0.13.0"
 matplotlib = "^3.8.2"
+datastructure = "^0.1.1"
+sortedcontainers = "^2.4.0"
+sympy = "^1.12"
 
 
 [build-system]
