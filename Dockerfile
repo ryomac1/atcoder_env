@@ -1,10 +1,5 @@
 # Python image
 FROM python:3.11.4
-s
-# Set timezone
-ENV TZ=Asia/Tokyo
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 # Set Python path and working directory
 ENV PYTHONPATH "${PYTHONPATH}:/workspace"
 WORKDIR /workspace
