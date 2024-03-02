@@ -1,6 +1,6 @@
 # Python image
 FROM python:3.11.4
-
+s
 # Set timezone
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -42,7 +42,7 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install
 
 # Copy AC Library and set environment variable
-COPY src/ac-library /workspace/src/ac-library
+COPY config/ac-library /workspace/src/ac-library
 ENV CPLUS_INCLUDE_PATH /workspace/src/ac-library
 
 # Create non-root user
