@@ -30,7 +30,7 @@
 1. Docker イメージの build とコンテナの起動
 
    ```bash
-   docker-compose up -d --build
+   docker compose up -d --build
    ```
 
 2. VSCode でリモートコンテナに接続します。[Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)拡張機能が必要です。
