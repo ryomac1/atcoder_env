@@ -16,10 +16,8 @@ RUN apt-get update && \
 
 
 # Copy AtCoder-cli configuration
-COPY config/atcoder-cli/config.json /root/.config/atcoder-cli-nodejs/
-COPY config/atcoder-cli/template /root/.config/atcoder-cli-nodejs/template
-
-# Install AC Library C++
+COPY .config/atcoder-cli/config.json /root/.config/atcoder-cli-nodejs/
+COPY .config/atcoder-cli/template /root/.config/atcoder-cli-nodejs/template
 
 # Install AC Library Python
 RUN pip install git+https://github.com/not522/ac-library-python
@@ -37,7 +35,7 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install
 
 # Copy AC Library and set environment variable
-COPY config/ac-library /workspace/src/ac-library
+COPY .config/ac-library /workspace/src/ac-library
 ENV CPLUS_INCLUDE_PATH /workspace/src/ac-library
 
 # Create non-root user
@@ -47,5 +45,5 @@ USER $USERNAME
 
 
 # Set zsh and copy zsh configuration
-COPY config/zsh/.zshrc /home/$USERNAME/.zshrc
+COPY .config/zsh/.zshrc /home/$USERNAME/.zshrc
 CMD ["/bin/zsh"]

@@ -1,3 +1,6 @@
+#PATH
+export CPLUS_INCLUDE_PATH=/workspace/.config/ac-library # atcoder library for c++
+
 # history
 HISTFILE=$HOME/.zsh_history     # 履歴を保存するファイル
 HISTSIZE=100000                 # メモリ上に保存する履歴のサイズ
@@ -67,4 +70,3 @@ alias test='oj t -c "python3 ./main.py" -d ./tests/'
 alias sub='acc s main.py -- --guess-python-interpreter pypy -w 0 -y'
 alias subp='acc s main.py -w 0 -y'
 alias an='acc new'
-
