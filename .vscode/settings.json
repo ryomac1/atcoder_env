@@ -13,6 +13,7 @@
   "editor.stickyScroll.enabled": true,
   "editor.snippetSuggestions": "top",
   "editor.wordWrap": "on",
+  "editor.parameterHints.enabled": false, // パラメータヒントを無効にする
   "explorer.compactFolders": false,
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,

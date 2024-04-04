@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/.config/ac-library",
+                "${workspaceFolder}/.config/ac-library"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
