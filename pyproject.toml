@@ -19,6 +19,8 @@ sortedcontainers = "^2.4.0"
 sympy = "^1.12"
 ruff = "^0.2.2"
 mdformat = "^0.7.17"
+transformers = "^4.42.3"
+torch = "^2.3.1"
 
 
 [build-system]

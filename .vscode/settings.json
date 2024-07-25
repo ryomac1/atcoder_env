@@ -20,7 +20,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Absolute Black",
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.panel.defaultLocation": "right",
   "workbench.reduceMotion": "on",
   "workbench.tree.renderIndentGuides": "always",

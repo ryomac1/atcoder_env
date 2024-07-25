@@ -4,9 +4,9 @@ FROM python:3.11.4
 ENV PYTHONPATH "${PYTHONPATH}:/workspace"
 WORKDIR /workspace
 
-# Install Zsh, C++ environment, Node.js, and AtCoder-cli
+# Install xsel command, Zsh, C++ environment, Node.js, and AtCoder-cli
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends zsh curl build-essential gcc g++ && \
+    apt-get install -y --no-install-recommends xsel zsh curl build-essential gcc g++ && \
     curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs && \
     npm install -g atcoder-cli && \
