@@ -19,6 +19,10 @@ more-itertools==9.0.0
 mpmath==1.2.1
     # via atcoder
     # via sympy
+mypy==1.11.0
+    # via atcoder
+mypy-extensions==1.0.0
+    # via mypy
 networkx==3.0
     # via atcoder
 numpy==1.24.1
@@ -31,6 +35,8 @@ python-dateutil==2.9.0.post0
     # via pandas
 pytz==2024.1
     # via pandas
+ruff==0.5.5
+    # via atcoder
 scipy==1.10.1
     # via atcoder
 six==1.16.0
@@ -39,3 +45,5 @@ sortedcontainers==2.4.0
     # via atcoder
 sympy==1.11.1
     # via atcoder
+typing-extensions==4.12.2
+    # via mypy
