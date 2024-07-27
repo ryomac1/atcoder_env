@@ -1,49 +1,37 @@
-# Python image
-FROM python:3.11.4
-# Set Python path and working directory
-ENV PYTHONPATH "${PYTHONPATH}:/workspace"
+# Base image
+FROM ubuntu:24.04
+
+# Set timezone
+ENV TZ=Asia/Tokyo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Install necessary packages
+RUN apt-get update &&\
+    apt-get install -y curl git zsh xsel&& \
+    apt-get upgrade -y && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get clean
+
+# Set working directory and Python path
 WORKDIR /workspace
+ENV PYTHONPATH="${PYTHONPATH}:/workspace"
 
-# Install xsel command, Zsh, C++ environment, Node.js, and AtCoder-cli
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends xsel zsh curl build-essential gcc g++ && \
-    curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
-    apt-get install -y nodejs && \
-    npm install -g atcoder-cli && \
-    acc config default-task-choice all && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Change default shell to zsh
+RUN chsh -s /bin/zsh root
 
+# Set zsh and create symbolic link to zsh configuration
+RUN ln -s /workspace/.config/.zshrc /root/.zshrc
 
-# Copy AtCoder-cli configuration
-COPY .config/atcoder-cli/config.json /root/.config/atcoder-cli-nodejs/
-COPY .config/atcoder-cli/template /root/.config/atcoder-cli-nodejs/template
+# Install Rye
+ENV RYE_HOME="/opt/rye"
+ENV PATH="$RYE_HOME/shims:$PATH"
+RUN curl -sSf https://rye.astral.sh/get | RYE_VERSION="0.34.0" RYE_INSTALL_OPTION="--yes" bash && \
+    rye config --set-bool behavior.use-uv=true
 
-# Install AC Library Python
-RUN pip install git+https://github.com/not522/ac-library-python
+# Copy project files and install dependencies
+COPY ./.python-version ./pyproject.toml ./requirements* ./README.md ./
 
-# Install Poetry
-ENV POETRY_HOME=/opt/poetry
-RUN curl -sSL https://install.python-poetry.org/ | python - && \
-    cd /usr/local/bin && \
-    ln -s /opt/poetry/bin/poetry && \
-    poetry config virtualenvs.create false
+# sync project files
+RUN rye sync
 
-
-# Copy Python project files and install dependencies
-COPY pyproject.toml poetry.lock ./
-RUN poetry install
-
-# Copy AC Library and set environment variable
-COPY .config/ac-library /workspace/src/ac-library
-ENV CPLUS_INCLUDE_PATH /workspace/src/ac-library
-
-# Create non-root user
-ENV USERNAME=atcoder
-RUN adduser --disabled-password --gecos '' $USERNAME
-USER $USERNAME
-
-
-# Set zsh and copy zsh configuration
-COPY .config/zsh/.zshrc /home/$USERNAME/.zshrc
 CMD ["/bin/zsh"]
