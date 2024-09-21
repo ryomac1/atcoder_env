@@ -9,7 +9,6 @@ dependencies = [
     "ac-library-python @ git+https://github.com/not522/ac-library-python@58f324e",
     "numpy==1.24.1",
     "scipy==1.10.1",
-    "networkx==3.0",
     "sympy==1.11.1",
     "sortedcontainers==2.4.0",
     "more-itertools==9.0.0",
@@ -18,6 +17,11 @@ dependencies = [
     "pandas==1.5.2",
     "ruff>=0.5.5",
     "mypy>=1.11.0",
+    "matplotlib>=3.9.2",
+    "networkx>=3.3",
+    "ipykernel>=6.29.5",
+    "tqdm>=4.66.5",
+    "polars>=1.6.0",
 ]
 
 readme = "README.md"
@@ -35,6 +39,7 @@ dev-dependencies = [
     "ruff>=0.4.2",
     "mypy>=1.10.0",
 ]
+
 [tool.ruff]
 exclude = [
     ".bzr",
@@ -64,26 +69,52 @@ exclude = [
     "site-packages",
     "venv",
 ]
-line-length = 119
+
+line-length = 120
 indent-width = 4
+target-version = "py312"
+extend-ignore = [
+    "F401",
+    "E722",
+    "PLR0913",  # Too many arguments
+    "PLR2004",  # Magic value used in comparison, consider replacing with a constant
+    "PLW2901",  # `for` loop variable overwritten by assignment target
+    "N803",  # Argument name should be lowercase
+    "N806",  # Variable name should be lowercase
+    "N812",  # Lowercase imported as non-lowercase
+]
 
 [tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = []
+select = [
+    "A",  # flake8-builtin
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # Pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "W",  # pycodestyle warning
+    "PL",  # Pylint
+    "UP",  # pyupgrade
+]
+
 
 [tool.ruff.format]
 quote-style = "double"
 
-[tool.ruff.lint.isort]
 
 [tool.mypy]
 allow_redefinition = true
-allow_untyped_globals = false
-check_untyped_defs = true
+allow_untyped_globals = true
+allow_untyped_locals = true
+check_untyped_defs = false
 color_output = true
-disallow_incomplete_defs = true
+disallow_incomplete_defs = false
 disallow_subclassing_any = false
 disallow_untyped_calls = false
 disallow_untyped_decorators = false
-disallow_untyped_defs = true
+disallow_untyped_defs = false
 error_summary = true
 ignore_missing_imports = true
 implicit_reexport = true
@@ -102,12 +133,7 @@ warn_unreachable = true
 warn_unused_configs = true
 warn_unused_ignores = false
 
-[tool.pytest.ini_options]
-minversion = "6.0"
-addopts = "-ra -q"
-testpaths = [
-    "tests",
-]
+
 
 [tool.hatch.metadata]
 allow-direct-references = true

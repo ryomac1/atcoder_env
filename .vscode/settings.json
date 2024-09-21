@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 15,
+  "editor.fontSize": 12,
   "editor.tabSize": 4,
   "editor.lineNumbers": "on",
   "editor.formatOnType": true,
@@ -15,10 +15,6 @@
   "editor.wordWrap": "on",
   "editor.parameterHints.enabled": false, // パラメータヒントを無効にする
   "explorer.compactFolders": false,
-  "files.autoSave": "afterDelay",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.panel.defaultLocation": "right",
@@ -29,7 +25,6 @@
   "workbench.editor.tabSizing": "fit",
   "workbench.editor.enablePreview": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.startupEditor": "none",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.rightClickBehavior": "paste",
@@ -40,6 +35,27 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
+  },
+  // Notebook settings
+  "notebook.output.scrolling": true, // ノートブックの出力をスクロール可能にする
+  "notebook.insertFinalNewline": false, // ノートブックの最後に改行を挿入する
+  "jupyter.askForKernelRestart": false, // Jupyterカーネルの再起動確認を無効にする
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": true,
+    "notebook.source.organizeImports": true
+  },
+  // Files settings
+  "files.insertFinalNewline": true, // ファイルの最後に改行を挿入する
+  "files.autoSave": "afterDelay", // ファイルを遅延後に自動保存する
+  "files.trimFinalNewlines": true, // ファイルの末尾の改行をトリミングする
+  "files.trimTrailingWhitespace": true, // ファイルの末尾の空白をトリミングする
+  "files.exclude": {
+    "src/__pycache__": true, // src/__pycache__を除外
+    ".mypy_cache": true, // .mypy_cacheを除外
+    ".pytest_cache": true, // .pytest_cacheを除外
+    ".ruff_cache": true, // .ruff_cacheを除外
+    ".venv": true, // .venvを除外
   },
   "ruff.lint.args": [
     "--config=${workspaceFolder}/pyproject.toml",
