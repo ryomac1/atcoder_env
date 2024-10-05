@@ -1,6 +1,6 @@
 # ignore directories
 main/*
-
+AHC/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -45,6 +45,7 @@ dependencies = [
     { name = "mypy" },
     { name = "networkx" },
     { name = "numpy" },
+    { name = "ortoolpy" },
     { name = "pandas" },
     { name = "polars" },
     { name = "ruff" },
@@ -52,6 +53,13 @@ dependencies = [
     { name = "sortedcontainers" },
     { name = "sympy" },
     { name = "tqdm" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "mypy" },
+    { name = "pytest" },
+    { name = "ruff" },
 ]
 
 [package.metadata]
@@ -65,6 +73,7 @@ requires-dist = [
     { name = "mypy", specifier = ">=1.11.0" },
     { name = "networkx", specifier = ">=3.3" },
     { name = "numpy", specifier = "==1.24.1" },
+    { name = "ortoolpy" },
     { name = "pandas", specifier = "==1.5.2" },
     { name = "polars", specifier = ">=1.6.0" },
     { name = "ruff", specifier = ">=0.5.5" },
@@ -72,6 +81,13 @@ requires-dist = [
     { name = "sortedcontainers", specifier = "==2.4.0" },
     { name = "sympy", specifier = "==1.11.1" },
     { name = "tqdm", specifier = ">=4.66.5" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "mypy", specifier = ">=1.11.1" },
+    { name = "pytest", specifier = ">=8.3.2" },
+    { name = "ruff", specifier = ">=0.6.2" },
 ]
 
 [[package]]
@@ -319,6 +335,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/04/40/44d6a94e52e91fe104f9ca95944466af34828992cbc66b666f541de137f1/fonttools-4.53.1-cp312-cp312-win32.whl", hash = "sha256:791b31ebbc05197d7aa096bbc7bd76d591f05905d2fd908bf103af4488e60670", size = 2147572 },
     { url = "https://files.pythonhosted.org/packages/6d/9a/b695930e1b4e6929cc60e294489421632a05c105ac8c56ee63ef56a47872/fonttools-4.53.1-cp312-cp312-win_amd64.whl", hash = "sha256:6ed170b5e17da0264b9f6fae86073be3db15fa1bd74061c8331022bca6d09bab", size = 2193313 },
     { url = "https://files.pythonhosted.org/packages/e4/b9/0394d67056d4ad36a3807b439571934b318f1df925593a95e9ec0516b1a7/fonttools-4.53.1-py3-none-any.whl", hash = "sha256:f1f8758a2ad110bd6432203a344269f445a2907dc24ef6bccfd0ac4e14e0d71d", size = 1090472 },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/4b/cbd8e699e64a6f16ca3a8220661b5f83792b3017d0f79807cb8708d33913/iniconfig-2.0.0.tar.gz", hash = "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3", size = 4646 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
 ]
 
 [[package]]
@@ -617,6 +642,18 @@ wheels = [
 ]
 
 [[package]]
+name = "ortoolpy"
+version = "0.2.33"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pulp" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/70/13/9edf234e8299fe4bfbdd2b9dc706938cc49fc37400946a9f324b4b84ec36/ortoolpy-0.2.33.tar.gz", hash = "sha256:c15f893093c519fa63e344cde7f711d28c5b79b743c4b62e023ffdb3b441abb9", size = 22852 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b5/b9/fe6fad06b44e9ec2647f5dc64082366812daf81586cb82df12028ec987c6/ortoolpy-0.2.33-py3-none-any.whl", hash = "sha256:051ca043921468014e1ff76dd4be3290a20242fb29d45624f125eebdb7654095", size = 23352 },
+]
+
+[[package]]
 name = "packaging"
 version = "24.1"
 source = { registry = "https://pypi.org/simple" }
@@ -740,6 +777,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pluggy"
+version = "1.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/96/2d/02d4312c973c6050a18b314a5ad0b3210edb65a906f868e31c111dede4a6/pluggy-1.5.0.tar.gz", hash = "sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1", size = 67955 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/5f/e351af9a41f866ac3f1fac4ca0613908d9a41741cfcf2228f4ad853b697d/pluggy-1.5.0-py3-none-any.whl", hash = "sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669", size = 20556 },
+]
+
+[[package]]
 name = "polars"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -791,6 +837,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pulp"
+version = "2.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bb/d5/7cb148b56f3603be3663498db3a63054d7d519eab32ef9c39f93faf6b7a9/pulp-2.9.0.tar.gz", hash = "sha256:2e30e6c0ef2c0edac185220e3e53faca62eb786a9bd68465208f05bc63e850f3", size = 17610175 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/10/704c18b5960b3f9b10efcc859e11881ad90f1e44008e181d2b10cd305a63/PuLP-2.9.0-py3-none-any.whl", hash = "sha256:ad6a9b566d8458f4d05f4bfe2cea59e32885dd1da6929a361be579222107987c", size = 17678417 },
+]
+
+[[package]]
 name = "pure-eval"
 version = "0.2.3"
 source = { registry = "https://pypi.org/simple" }
@@ -824,6 +879,23 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/46/3a/31fd28064d016a2182584d579e033ec95b809d8e220e74c4af6f0f2e8842/pyparsing-3.1.2.tar.gz", hash = "sha256:a1bac0ce561155ecc3ed78ca94d3c9378656ad4c94c1270de543f621420f94ad", size = 889571 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl", hash = "sha256:f9db75911801ed778fe61bb643079ff86601aca99fcae6345aa67292038fb742", size = 103245 },
+]
+
+[[package]]
+name = "pytest"
+version = "8.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "tomli", marker = "python_full_version < '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8b/6c/62bbd536103af674e227c41a8f3dcd022d591f6eed5facb5a0f31ee33bbc/pytest-8.3.3.tar.gz", hash = "sha256:70b98107bd648308a7952b06e6ca9a50bc660be218d53c257cc1fc94fda10181", size = 1442487 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6b/77/7440a06a8ead44c7757a64362dd22df5760f9b12dc5f11b6188cd2fc27a0/pytest-8.3.3-py3-none-any.whl", hash = "sha256:a6853c7375b2663155079443d2e45de913a911a11d669df02a50814944db57b2", size = 342341 },
 ]
 
 [[package]]
