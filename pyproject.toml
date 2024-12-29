@@ -5,42 +5,43 @@ description = "Add your description here"
 authors = [
     { name = "ryomac", email = "100513663+ryomac1@users.noreply.github.com" }
 ]
+readme = "README.md"
+requires-python = ">=3.11"
+
 dependencies = [
-    "ac-library-python @ git+https://github.com/not522/ac-library-python@58f324e",
-    "numpy==1.24.1",
-    "scipy==1.10.1",
-    "sympy==1.11.1",
-    "sortedcontainers==2.4.0",
-    "more-itertools==9.0.0",
+    "ac-library-python",
     "bitarray==2.6.2",
-    "mpmath==1.2.1",
-    "pandas==1.5.2",
-    "ruff>=0.5.5",
-    "mypy>=1.11.0",
-    "matplotlib>=3.9.2",
-    "networkx>=3.3",
     "ipykernel>=6.29.5",
-    "tqdm>=4.66.5",
-    "polars>=1.6.0",
+    "matplotlib>=3.9.2",
+    "more-itertools==9.0.0",
+    "mpmath==1.2.1",
+    "networkx>=3.3",
+    "numpy==1.24.1",
     "ortoolpy>=0.2.33",
+    "pandas==1.5.2",
+    "polars>=1.6.0",
+    "scipy==1.10.1",
+    "seaborn>=0.13.2",
+    "sortedcontainers==2.4.0",
+    "sympy==1.11.1",
+    "tqdm>=4.66.5",
 ]
 
-readme = "README.md"
-requires-python = ">= 3.10"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
 
 [tool.uv]
 dev-dependencies = [
-    "ruff>=0.6.2",
-    "mypy>=1.11.1",
-    "pytest>=8.3.2",
-]
-
-
-[tool.rye]
-managed = true
-dev-dependencies = [
-    "ruff>=0.4.2",
-    "mypy>=1.10.0",
+    "pytest>=8.3.3",
+    "ruff>=0.6.5",
+    "mypy>=1.11.2",
 ]
 
 [tool.ruff]
@@ -71,28 +72,31 @@ exclude = [
     "node_modules",
     "site-packages",
     "venv",
+    ".ipynb",
 ]
-
 line-length = 120
 indent-width = 4
-target-version = "py312"
+target-version = "py311"
 
-[tool.ruff.lint]
-ignore = [
-    "F401", # モジュールがインポートされたが、未使用。
-    "E402", # インポートはファイルの先頭に置くべきだが、それを無視する設定。
-    "E722", # `except`に具体的な例外を指定せずに使うことを避ける警告。未指定の`except`を無視。
-    "PLR0913",  # 関数やメソッドに引数が多すぎる（一般的には4つ以上）。無視する設定。
-    "PLR2004",  # 定数の代わりにマジックナンバーを使っている場合の警告を無視。
-    "PLW2901",  # `for`ループ変数がループの内部で再定義されている場合の警告を無視。
-    "N803",  # 引数名は小文字にするべきだが、大文字も許可する設定。
-    "N806",  # 変数名は小文字にするべきだが、大文字も許可する設定。
-    "N812",  # 小文字の変数を大文字でインポートした場合の警告を無視。
-    "E741", # 一文字の変数名（曖昧な変数名）に対する警告を無視する設定。
-    "PLR5501",
-    "UP035",
+fixable = ["ALL"]
+unfixable = []
+select = [
+    "A",  # flake8-builtin
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # Pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "W",  # pycodestyle warning
+    "PL", # Pylint
+    "UP", # pyupgrade
 ]
 
+[tool.ruff.format]
+quote-style = "double"
+line-ending = "auto"
+
+[tool.ruff.lint]
 fixable = ["ALL"]
 unfixable = []
 select = [
@@ -106,18 +110,44 @@ select = [
     "PL",  # Pylint
     "UP",  # pyupgrade
 ]
+ignore = [
+    "ANN1",    # missing type self and cls
+    "E999",    # syntax error
+    "UP027",   # unpacked list comprehension
+    "PT004",   # pytest missing fixture name underscore
+    "PT005",   # pytest incorrect fixture name underscore
+    "D1",      # undocumented
+    "TD001",   # invalid todo tag
+    "TD002",   # missing todo author
+    "TD003",   # missing todo link
+    "PD011",   # pandas use of dot values
+    "F401",    # unused import
+    "E402",    # module level import not at top of file
+    "PLW0603", # global-statement
+    "ANN001",  # missing type annotation
+    "ANN201",  # missing type annotation
+    "T201",    # assert
+    "T203",    # assert
+    "INP001",  # input
+    "PLR1722", # Use `sys.exit()` instead of `exit`
+    "ERA001",  # raise
+    "PERF401", # use of `len()`
+    "ANN204",
+    "D400",
+    "D403",
+    "D415",
+    "D413",
+    "D412",
+    "D417",
+    "PLW0127",
+    "N802",
+    "N803",
+    "N806",
+    "S311",
+    "C901",
+]
 
+[tool.uv.sources]
+atcoder = { workspace = true }
+ac-library-python = { git = "https://github.com/not522/ac-library-python" }
 
-[tool.ruff.format]
-quote-style = "double"
-
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.metadata]
-allow-direct-references = true
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/atcoder"]

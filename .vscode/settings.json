@@ -13,7 +13,7 @@
   "editor.stickyScroll.enabled": true,
   "editor.snippetSuggestions": "top",
   "editor.wordWrap": "on",
-  "editor.parameterHints.enabled": false, // パラメータヒントを無効にする
+  "editor.parameterHints.enabled": true, // パラメータヒントを無効にする
   "explorer.compactFolders": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "GitHub Dark Default",
@@ -40,10 +40,10 @@
   "notebook.output.scrolling": true, // ノートブックの出力をスクロール可能にする
   "notebook.insertFinalNewline": false, // ノートブックの最後に改行を挿入する
   "jupyter.askForKernelRestart": false, // Jupyterカーネルの再起動確認を無効にする
-  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnSave.enabled": true, // ノートブックの保存時に自動フォーマットする
   "notebook.codeActionsOnSave": {
-    "notebook.source.fixAll": true,
-    "notebook.source.organizeImports": true
+    "notebook.source.fixAll": true, // ノートブックのソースコードを保存時に自動修正する
+    "notebook.source.organizeImports": true // ノートブックのソースコードを保存時に自動インポートを整理する
   },
   // Files settings
   "files.insertFinalNewline": true, // ファイルの最後に改行を挿入する
